@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            
+            <input type="text" placeholder="Add task" class="txtb" id="in">
+            <div  class="heading" id="all"></div>
+
+        </div>
+        <div>
+            <button class="btn btn-primary" id="view">Save</button>
+        </div>
+        
+        <script>
+            var x=0;
+            var array=[];
+
+            $(".txtb").on("keyup",function(e)
+            {
+                if(e.keyCode == 13 && $(".txtb").val() != "")
+                { 
+                    var task=$("<div class='tasks'></div>").text($(".txtb").val());
+                    array[x] = document.getElementById("in").value;
+                    var comp=$("<button class='btn btn-success btn-sm'><i class='fa fa-check'></i>Complete</button>").click(function()
+                    {
+                        var p=$(this).parent();
+                        p.fadeOut(function()
+                        {
+                          p.remove();
+                        });
+                    });
+                    var prog=$("<button class='btn btn-secondary btn-sm'>Mark in progress</button>").click(function()
+                    {
+                        $(this).html("In progress");
+                    });
+                    task.append(comp,prog);
+                    $(".heading").append(task);
+
+                    $(".txtb").val("");
+                    x++;
+                }
+
+            });
+            document.getElementById("view").addEventListener("click",function()
+            {
+               localStorage.setItem("ret",JSON.stringify(array));
+            });
+    
+        </script>
+        
+    </body>
+    </html>

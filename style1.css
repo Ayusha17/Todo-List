@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url("../bg1.jpg");
+    
+}
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:10px;
+}
+.heading{
+    
+    
+    font-family: sans-serif;
+    margin:4px;
+    padding:10px;
+}
+.txtb{
+    width:100%;
+    background-color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkred;
+    padding:10px;
+    margin:4px;
+}
+.titl{
+    width:100%;
+    background-color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:10px;
+    margin:4px;
+}
+.tasks{
+    background-color: whitesmoke;
+    margin: 4px;
+    padding:10px;
+    width:100%;
+    height:60px;
+    border: solid black;
+    box-shadow: inset 10px 10px 30px #595959;
+}
+.tasks i{
+    float:right;
+    margin-left: 20px;
+    cursor:pointer
+}
+.btn{
+    float:right;
+    margin-left: 20px;
+}
+img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height:400px;
+    border-radius:50%;
+    
+}
+.text{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+}
+#allLists{
+    color:white;
+}
+#main{
+    margin-left:90px;
+    padding:10px;
+    font-size: larger;
+}
+hr{
+    background-color: white;
+}
+div{
+    overflow-x: hidden;
+}
+#view{
+    margin:10px;
+    padding:10px;
+}
+
